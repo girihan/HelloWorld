@@ -2,9 +2,9 @@ name: Java Build with Gradle and JUnit 5
 
 on:
   push:
-    branches: [ main ] # 빌드를 수행할 브랜치
+    branches: [ master ] # 빌드를 수행할 브랜치
   pull_request:
-    branches: [ main ] # 머지 전에 빌드 수행
+    branches: [ master ] # 머지 전에 빌드 수행
 
 jobs:
   build-and-test:
