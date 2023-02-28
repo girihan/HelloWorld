@@ -9,7 +9,7 @@ class MultiplierTest {
     @Test
     void mulitple() {
         Multiplier m = new Multiplier();
-        assertEquals(m.mulitple(3,2), 6);
+        assertEquals(m.mulitple(4,2), 8);
     }
 
     @Test
