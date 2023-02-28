@@ -8,9 +8,13 @@ class MultiplierTest {
 
     @Test
     void mulitple() {
+        Multiplier m = new Multiplier();
+        assertEquals(m.mulitple(3,2), 6);
     }
 
     @Test
     void double_multiple() {
+        Multiplier m = new Multiplier();
+        assertEquals(m.double_multiple(3,2), 12);
     }
 }
