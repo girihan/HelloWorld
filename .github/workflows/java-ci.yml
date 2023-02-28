@@ -1,0 +1,34 @@
+name: Java Build with Gradle and JUnit 5
+
+on:
+  push:
+    branches: [ main ] # 빌드를 수행할 브랜치
+  pull_request:
+    branches: [ main ] # 머지 전에 빌드 수행
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest # 빌드를 수행할 운영체제
+
+    steps:
+    - uses: actions/checkout@v2 # 코드 체크아웃
+    - name: Set up JDK 11 # JDK 11 설치
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+
+    - name: Grant execute permission for gradlew # gradlew 실행 권한 부여
+      run: chmod +x gradlew
+
+    - name: Build with Gradle # Gradle 빌드 실행
+      run: ./gradlew build
+
+    - name: Run JUnit 5 tests # JUnit 5 테스트 수행
+      run: ./gradlew test
+
+    - name: Archive build artifacts # 빌드 결과물 압축하여 아카이브
+      uses: actions/upload-artifact@v2
+      with:
+        name: build-artifacts
+        path: build/libs/
