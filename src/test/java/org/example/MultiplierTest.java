@@ -15,6 +15,6 @@ class MultiplierTest {
     @Test
     void double_multiple() {
         Multiplier m = new Multiplier();
-        assertEquals(m.double_multiple(3,2), 12);
+        assertEquals(m.double_multiple(4,2), 16);
     }
 }
