@@ -9,4 +9,8 @@ public class Multiplier {
     public int double_multiple(int a, int b) {
         return a*b*2;
     }
+
+    public int divider(int a, int b) {
+        return a/b;
+    }
 }
