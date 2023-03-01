@@ -26,6 +26,16 @@ jobs:
 
     - name: Run JUnit 5 tests # JUnit 5 테스트 수행
       run: ./gradlew test
+      
+    - name: Generate JaCoCo Report
+      run: ./gradlew jacocoTestReport
+
+    - name: Upload JaCoCo Report
+      uses: actions/upload-artifact@v2
+      with:
+          name: jacoco-report
+          path: build/reports/jacoco/test/html
+
 
     - name: Archive build artifacts # 빌드 결과물 압축하여 아카이브
       uses: actions/upload-artifact@v2
