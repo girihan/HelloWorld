@@ -22,7 +22,10 @@ jobs:
       run: chmod +x gradlew
 
     - name: Build with Gradle # Gradle 빌드 실행
-      run: ./gradlew build
+      uses: gradle/gradle-build-action@v2
+      with:
+        arguments: build 
+        cache-read-only: ${{ github.ref != 'refs/heads/main' && github.ref != 'refs/heads/develop' }}
 
     - name: Run JUnit 5 tests # JUnit 5 테스트 수행
       run: ./gradlew test
