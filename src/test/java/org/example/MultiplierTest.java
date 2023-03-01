@@ -29,4 +29,10 @@ class MultiplierTest {
         Multiplier m = new Multiplier();
         assertEquals(m.sum(2,3), 5);
     }
+
+    @Test
+    void sub() {
+        Multiplier m = new Multiplier();
+        assertEquals(m.sub(5,3), 2);
+    }
 }
