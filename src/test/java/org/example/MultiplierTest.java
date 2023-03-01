@@ -23,4 +23,10 @@ class MultiplierTest {
         Multiplier m = new Multiplier();
         assertEquals(m.divider(6,3), 2);
     }
+
+    @Test
+    void sum() {
+        Multiplier m = new Multiplier();
+        assertEquals(m.sum(2,3), 5);
+    }
 }
