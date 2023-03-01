@@ -21,4 +21,8 @@ public class Multiplier {
     public int sub(int a, int b) {
         return a-b;
     }
+
+    public float mod(int a, int b) {
+        return a%b;
+    }
 }

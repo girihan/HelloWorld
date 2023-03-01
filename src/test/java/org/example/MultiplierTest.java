@@ -35,4 +35,9 @@ class MultiplierTest {
         Multiplier m = new Multiplier();
         assertEquals(m.sub(5,3), 2);
     }
+    @Test
+    void mod() {
+        Multiplier m = new Multiplier();
+        assertEquals(m.mod(3,2), 1.0f);
+    }
 }
